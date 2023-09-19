@@ -22,6 +22,7 @@ jobs:
         run: npm install
       - name: Build app and create zip file
         run : |  
+        cd clients
         npm run build
         zip -j /home/naul2354/Desktop/todo-app/public/app.zip /home/naul2354/Desktop/todo-app/public/*
       - name: Publish zip file to GitHub Releases
