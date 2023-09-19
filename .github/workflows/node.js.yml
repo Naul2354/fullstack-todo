@@ -20,6 +20,16 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+      - name: Build app and create zip file
+        run : |  
+        npm run build
+        zip -j /home/naul2354/Desktop/todo-app/public/app.zip /home/naul2354/Desktop/todo-app/public/*
+      - name: Publish zip file to GitHub Releases
+        uses: softprops/action-gh-release@v1
+        with:
+          files: app.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
   # deploy:
