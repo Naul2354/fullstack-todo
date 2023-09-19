@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ToDo from "./components/ToDo";
-import { getAllByAltText } from "@testing-library/react";
+// import { getAllByAltText } from "@testing-library/react";
 import { addToDo, getAllToDo, updateToDo , deleteToDo } from "./utils/HandleApi";
 
 
